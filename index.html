@@ -1,121 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Web Avanzada</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Página Web</title>
+    <style>
+        /* Estilos para la sección Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Estilos para la sección Hero */
+        .hero {
+            background-image: url('hero_image.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #555;
+        }
+
+        /* Estilos para la sección de dos columnas */
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .column {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .column h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .column p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .column {
+            width: 25%;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .column.logo img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .column ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .column ul li {
+            margin-bottom: 10px;
+        }
+
+        .social-buttons {
+            text-align: center;
+        }
+
+        .social-buttons a {
+            display: inline-block;
+            margin: 0 5px;
+            background-color: #fff;
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .social-buttons a:hover {
+            background-color: #ccc;
+        }
+    </style>
 </head>
-<body
- /* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<body>
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-}
+<header>
+    <div class="logo">
+        <a href="#"><img src="logo_empresa.png" alt="Logo de la empresa"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+<section class="hero">
+    <div class="container">
+        <h1>¡Bienvenido a nuestra página web!</h1>
+        <p>Somos una empresa comprometida en ofrecer servicios de calidad.</p>
+        <a href="servicios.html">Descubre nuestros servicios</a>
+    </div>
+</section>
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+<section class="two-columns">
+    <div class="column">
+        <div class="container">
+            <img src="imagen1.jpg" alt="Imagen 1">
+        </div>
+    </div>
+    <div class="column">
+        <div class="container">
+            <h2>¡Bienvenido a nuestra página web!</h2>
+            <p>Somos una empresa especializada en diseño web que ofrece servicios de alta calidad. Nuestro equipo de expertos está comprometido en brindarte soluciones creativas y funcionales para tus necesidades en línea.</p>
+            <a href="servicios.html">Descubre nuestros servicios</a>
+        </div>
+    </div>
+</section>
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
+<section class="gallery">
+    <img src="imagen1.jpg" alt="Imagen 1">
+    <img src="imagen2.jpg" alt="Imagen 2">
+    <img src="imagen3.jpg" alt="Imagen 3">
+    <img src="imagen4.jpg" alt="Imagen 4">
+    <img src="imagen5.jpg" alt="Imagen 5">
+    <img src="imagen6.jpg" alt="Imagen 6">
+</section>
 
-main {
-    padding: 20px;
-}
+<footer>
+    <div class="column logo">
+        <img src="logo_empresa.png" alt="Logo de la empresa">
+    </div>
+    <div class="column">
+        <h3>Servicios</h3>
+        <ul>
+            <li>Diseño web</li>
+            <li>Desarrollo web</li>
+            <li>Optimización SEO</li>
+            <li>Mantenimiento web</li>
+        </ul>
+    </div>
+    <div class="column">
+        <h3>Pestañas Legales</h3>
+        <ul>
+            <li>Términos de servicio</li>
+            <li>Política de privacidad</li>
+            <li>Aviso legal</li>
+            <li>Política de cookies</li>
+        </ul>
+    </div>
+    <div class="column social-buttons">
+        <h3>Redes Sociales</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+    </div>
+</footer>
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-/* Estilos para el héroe */
-#hero {
-    background-image: url('hero-image.jpg');
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-#hero h1 {
-    font-size: 48px;
-}
-
-#hero p {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Estilos para los botones */
-.btn {
-    display: inline-block;
-    background-color: #ff5733;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #e64c00;
-}
-
-    
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <h1>Bienvenido a nuestra página web avanzada</h1>
-            <p>Descubre nuestras increíbles ofertas</p>
-            <a href="#" class="btn">Ver más</a>
-        </section>
-
-        <section id="featured-products">
-            <h2>Productos destacados</h2>
-            <!-- Aquí se mostrarían los productos destacados -->
-        </section>
-
-        <section id="services">
-            <h2>Nuestros servicios</h2>
-            <!-- Aquí se mostrarían los servicios ofrecidos -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Página Web Avanzada. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
-    
 </body>
 </html>
